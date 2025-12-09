@@ -1,0 +1,196 @@
+/* style.css - Premium & Responsif */
+
+/* Reset browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    background-color: #0d47a1;
+    color: white;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #ffca28;
+}
+
+/* HOME */
+#home {
+    text-align: center;
+    padding: 80px 10%;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/goa-gong.jpg') center/cover no-repeat;
+    color: white;
+    border-radius: 0 0 30px 30px;
+}
+
+#home h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+#home p {
+    font-size: 18px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+/* LISTING */
+#listing {
+    padding: 80px 10%;
+    background-color: #f5f7fa;
+}
+
+#listing h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 32px;
+    color: #0d47a1;
+}
+
+.properties {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.property-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.property-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.property-card h3 {
+    margin-bottom: 10px;
+    color: #0d47a1;
+    font-size: 20px;
+}
+
+.property-card p {
+    font-size: 15px;
+    color: #555;
+}
+
+.property-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+/* CONTACT */
+#contact {
+    padding: 80px 10%;
+    text-align: center;
+    background-color: #0d47a1;
+    color: white;
+    border-radius: 30px 30px 0 0;
+}
+
+#contact h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 18px;
+}
+
+#contact a {
+    color: #ffca28;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#contact button {
+    margin-top: 25px;
+    padding: 12px 30px;
+    font-size: 16px;
+    background-color: #ffca28;
+    color: #0d47a1;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+#contact button:hover {
+    transform: translateY(-3px);
+    background-color: #ffc107;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px 10%;
+    background-color: #0d47a1;
+    color: white;
+    margin-top: 40px;
+    letter-spacing: 0.5px;
+}
+
+/* Fade-in animasi */
+.property-card.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header nav {
+        margin-top: 15px;
+    }
+    #home h2, #listing h2, #contact h2 {
+        font-size: 28px;
+    }
+    #home p {
+        font-size: 16px;
+    }
+}
